@@ -61,7 +61,8 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 
 **Links**
 
-[💻 Source Code (dev)](https://github.com/handbinu/dailyatelier/tree/dev) · [🌐 Live Demo](https://dailyatelier-frontend.canflerang.workers.dev/) · [📖 Technical Documentation](https://github.com/handbinu/dailyatelier/blob/dev/docs/TECHNICAL.md)
+
+[💻 Source Code (main)](https://github.com/handbinu/dailyatelier) · [🌐 Live Demo](https://dailyatelier-frontend.canflerang.workers.dev/) · [📖 Technical Documentation](https://github.com/handbinu/dailyatelier/blob/main/docs/TECHNICAL.md)
 
 > 내부 데모 포인트 기반 서비스로, 실제 외부 PG 결제는 연동하지 않았습니다.
 

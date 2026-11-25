@@ -1,4 +1,3 @@
-
 # 👋 안녕하세요, 손예빈입니다!
 
 Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니다.
@@ -30,7 +29,7 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 
 ### 🎨 DailyAtelier — 미술품 경매·거래 웹 서비스
 
-**개인 프로젝트 | 2026.03 ~ 현재**
+**개인 프로젝트 | 2026.03 ~ 2026.11**
 
 `Java 17` `Spring Boot` `JPA` `MySQL` `Flyway` `React`
 
@@ -38,7 +37,7 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 
 2023년 팀 졸업작품을 Spring Boot와 React 기반으로 재설계·재구현했습니다.
 
-신진·개인 작가의 작품 등록부터 구매자의 입찰, 낙찰, 주문, 내부 포인트 결제, 배송, 환불까지 이어지는 거래 흐름을 구현했습니다.
+신진·개인 작가의 작품 등록부터 구매자의 입찰, 낙찰, 주문, 내부 포인트 결제, 배송, 구매확정, 환불 및 리뷰까지 이어지는 거래 흐름을 구현했습니다.
 
 **주요 기술 경험**
 
@@ -49,22 +48,23 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 
 **테스트 및 검증**
 
-- **동시 입찰 테스트** — 16개 계정·4개 작품에 동시 요청을 발생시켜 입찰 결과와 계정별 잔액·예치금 및 원장 합계의 일치 여부 검증
-- **MySQL 검증** — 실제 MySQL 환경에서 락·제약 조건을 별도로 검증하고, 빈 DB에 Flyway V1~V11 적용 및 스키마 검증
+- **동시 입찰 테스트** — H2 환경에서 16개 계정·4개 작품의 동시 입찰을 재현하고 계정별 원장 합계 및 활성 예치 상태 검증
+- **MySQL 검증** — 실제 MySQL 환경에서 락·제약 조건·트랜잭션 롤백을 별도로 검증하고, Flyway 마이그레이션 및 스키마 검증 수행
 - **자동화** — JUnit, Vitest, GitHub Actions, Playwright를 활용한 백엔드·프론트엔드·UI 테스트 구성
-- **부하 관찰** — k6로 입찰 경합을 재현하고 커넥션 풀 크기 10·20·30을 비교. 처리량과 상위 백분위 응답 시간의 일관된 개선이 없어 기본값 10 유지
+- **부하 관찰** — k6로 로컬 환경의 입찰 경합을 재현하고 커넥션 풀 크기 10·20·30을 비교. 처리량과 상위 백분위 응답 시간의 일관된 개선이 없어 기본값 10 유지
 
-**현재 개선 작업**
+**개발 및 배포**
 
-- **진행 중** — 서비스 전반의 UI/UX 개선 및 반응형 화면 정비
-- **후속 검토** — MySQL 입찰 조회 인덱스 및 배포 환경의 동시성·락 타임아웃 검증
+- 주요 거래 기능 구현 및 공개 데모 배포 완료
+- Cloudtype, Cloudflare Workers, Aiven MySQL, Cloudinary를 활용한 공개 데모 환경 구성
+- 설계 결정, 테스트 근거, 실행 방법 및 데모 이용 안내 문서화
+- 후속 개선 사항은 [BACKLOG](https://github.com/handbinu/dailyatelier/blob/main/BACKLOG.md)에서 관리
 
 **Links**
 
-
 [💻 Source Code (main)](https://github.com/handbinu/dailyatelier) · [🌐 Live Demo](https://dailyatelier-frontend.canflerang.workers.dev/) · [📖 Technical Documentation](https://github.com/handbinu/dailyatelier/blob/main/docs/TECHNICAL.md)
 
-> 내부 데모 포인트 기반 서비스로, 실제 외부 PG 결제는 연동하지 않았습니다.
+> 내부 데모 포인트 기반 서비스로, 실제 외부 PG 승인·취소는 연동하지 않았습니다. 공개 데모는 체험용 환경으로 일부 기능이 제한됩니다.
 
 ---
 
@@ -72,7 +72,9 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 
 ### 🎨 DailyAtelier (2023) — 미술품 경매 웹 서비스
 
-**5인 팀 졸업작품 | 팀장/PM · 프론트엔드·백엔드 개발 참여**
+**5인 팀 졸업작품 | 2023.03 ~ 2023.10**
+
+**팀장/PM · 프론트엔드·백엔드 개발 참여**
 
 `PHP` `Apache` `MySQL/MariaDB` `HTML` `CSS` `JavaScript` `jQuery`
 
@@ -83,13 +85,15 @@ Java와 Spring Boot를 중심으로 백엔드 개발을 공부하고 있습니�
 - **Frontend** — 일부 화면의 HTML/CSS 구현 및 디자인 참여
 - **PM** — 개발 일정·역할 조율, 주간 회의 및 Trello 기반 이슈 관리
 
-졸업작품 전시회에서 서비스를 시연하고 사용자 피드백을 수집했습니다.
+졸업작품 전시회에서 서비스를 시연하고 사용자 피드백을 수집했습니다. 이후 Java/Spring Boot 기반 개인 재구현 프로젝트의 출발점이 되었습니다.
 
 [📂 GitHub Repository](https://github.com/5HapZizol/daliy-Atelier)
 
 ### 📱 PASTIME (HOBBING) — 취미 공유 익명 SNS
 
-**대학 동아리 6인 팀 프로젝트 | 기획 · 디자인 · Android 개발 참여**
+**대학 동아리 6인 팀 프로젝트 | 2021.07 ~ 2021.08**
+
+**기획 · 디자인 · Android 개발 참여**
 
 `Java 8` `Android SDK` `XML` `Git/GitHub`
 
